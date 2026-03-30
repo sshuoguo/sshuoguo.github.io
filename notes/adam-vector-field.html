@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta charset="UTF-8">
+    <title>Adam and Vector Fields</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>General</h2>
+        <a href="../index.html">Home</a>
+        <a href="../notes.html">Notes</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../courses.html">Coursework</a>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <h1>Understanding Adam from a Vector Field Perspective</h1>
+
+        <!-- Question -->
+        <h2 class="section-title">1. Question</h2>
+        <div class="section">
+            <p>
+                Adam is one of the most widely used optimization methods in modern machine learning,
+                yet its behavior is often difficult to interpret theoretically.
+            </p>
+            <p>
+                What does Adam actually do to the optimization landscape?
+                Can it be understood as inducing a different vector field compared to standard gradient descent?
+            </p>
+        </div>
+
+        <!-- Gradient Flow -->
+        <h2 class="section-title">2. Gradient Descent as a Vector Field</h2>
+        <div class="section">
+            <p>
+                Standard gradient descent follows the update rule:
+            </p>
+
+            <p>
+                x_{k+1} = x_k - η ∇f(x_k)
+            </p>
+
+            <p>
+                This can be interpreted as a discretization of the continuous-time system:
+            </p>
+
+            <p>
+                dx/dt = -∇f(x)
+            </p>
+
+            <p>
+                which defines a vector field over the space. At each point x,
+                the vector -∇f(x) determines the direction of motion.
+            </p>
+        </div>
+
+        <!-- Adam -->
+        <h2 class="section-title">3. What Adam Changes</h2>
+        <div class="section">
+            <p>
+                Adam modifies this vector field by introducing coordinate-wise scaling
+                based on past gradients.
+            </p>
+
+            <p>
+                Instead of following the true gradient field, Adam effectively follows:
+            </p>
+
+            <p>
+                v(x) = -D(x) ∇f(x)
+            </p>
+
+            <p>
+                where D(x) is a diagonal matrix determined by second-moment estimates.
+            </p>
+
+            <p>
+                This means that Adam does not follow the original gradient field,
+                but a distorted version of it.
+            </p>
+        </div>
+
+        <!-- Geometry -->
+        <h2 class="section-title">4. Geometric Interpretation</h2>
+        <div class="section">
+            <p>
+                From a geometric perspective, this transformation can be viewed as
+                a local rescaling of the space.
+            </p>
+
+            <p>
+                Coordinates with large historical gradients are suppressed,
+                while those with small gradients are amplified.
+            </p>
+
+            <p>
+                This creates an anisotropic geometry, where the notion of
+                "steepest descent" is altered.
+            </p>
+        </div>
+
+        <!-- Stability -->
+        <h2 class="section-title">5. Implications for Stability</h2>
+        <div class="section">
+            <p>
+                This distortion may break desirable properties of the original gradient flow.
+            </p>
+
+            <p>
+                In particular, the modified vector field may no longer align with
+                descent directions of the original objective.
+            </p>
+
+            <p>
+                This provides one possible explanation for the instability
+                or divergence of Adam observed in some settings.
+            </p>
+        </div>
+
+        <!-- Thoughts -->
+        <h2 class="section-title">6. Open Questions</h2>
+        <div class="section">
+            <p>
+                This perspective seems closely related to conditioning and preconditioning methods,
+                but the exact relationship is not yet fully clear.
+            </p>
+
+            <p>
+                Can the geometry induced by Adam be characterized more formally?
+                How does this affect convergence in high-dimensional problems?
+            </p>
+
+            <p>
+                Understanding these questions may help clarify when and why adaptive methods succeed.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
