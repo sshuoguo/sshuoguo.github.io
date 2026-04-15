@@ -1,258 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shuo's Learning Material</title>
-  <style>
-    :root {
-      --bg: #f7f7f8;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --line: #e5e7eb;
-      --hover: #f0f1f3;
-      --max-width: 1100px;
-      --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-      --comment-bg: #f3f6fb;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shuo's Thinking Notes</title>
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f1115;
-        --card: #171a21;
-        --text: #e5e7eb;
-        --muted: #9ca3af;
-        --line: #2a2f3a;
-        --hover: #202531;
-        --shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-        --comment-bg: #111827;
-      }
-    }
+    <style>
+        :root {
+            --bg: #f2f2f0;
+            --card: #fcfcfa;
+            --card-soft: #f6f5f8;
+            --text: #222227;
+            --muted: #6a6a73;
+            --line: #d7d7de;
+            --hover: #f3f2f6;
 
-    * {
-      box-sizing: border-box;
-    }
+            --accent: #655775;
+            --accent-strong: #4f435f;
+            --accent-soft: #f1eef6;
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.7;
-    }
+            --max-width: 1180px;
+            --shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+            --radius: 18px;
+        }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #121214;
+                --card: #18181c;
+                --card-soft: #1d1d23;
+                --text: #ececf1;
+                --muted: #a8a8b2;
+                --line: #2d2d36;
+                --hover: #202027;
 
-    .container {
-      width: 100%;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding-left: 32px;
-      padding-right: 32px;
-    }
+                --accent: #bba9d2;
+                --accent-strong: #d9cdea;
+                --accent-soft: rgba(187, 169, 210, 0.10);
 
-    .topbar {
-      border-bottom: 1px solid var(--line);
-      background: var(--bg);
-    }
+                --shadow: 0 18px 40px rgba(0, 0, 0, 0.34);
+            }
+        }
 
-    .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 72px;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    .site-title {
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-    }
+        html {
+            color-scheme: light dark;
+        }
 
-    .nav {
-      display: flex;
-      gap: 20px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at top left, rgba(101, 87, 117, 0.08), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.05), transparent 30%),
+                var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+        }
 
-    .nav a:hover {
-      color: var(--text);
-    }
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.18s ease, transform 0.18s ease, background 0.18s ease;
+        }
 
-    .hero {
-      padding: 56px 0 28px;
-    }
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding-left: 36px;
+            padding-right: 36px;
+        }
 
-    .hero h1 {
-      margin: 0 0 10px;
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      line-height: 1.15;
-      font-weight: 700;
-    }
+        .topbar {
+            border-bottom: 1px solid var(--line);
+            background: rgba(242, 242, 240, 0.78);
+            backdrop-filter: blur(8px);
+        }
 
-    .hero p {
-      margin: 0;
-      max-width: 720px;
-      color: var(--muted);
-      font-size: 1rem;
-    }
+        @media (prefers-color-scheme: dark) {
+            .topbar {
+                background: rgba(18, 18, 20, 0.82);
+            }
+        }
 
-    .section {
-      padding: 20px 0 72px;
-    }
+        .topbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 74px;
+        }
 
-    .section h2 {
-      margin: 0 0 20px;
-      font-size: 1.5rem;
-      font-weight: 650;
-    }
+        .site-title {
+            font-size: 1.02rem;
+            font-weight: 650;
+            color: var(--accent-strong);
+            letter-spacing: 0.01em;
+        }
 
-    .notes-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+        .hero {
+            padding: 52px 0 24px;
+        }
 
-   .note-item {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 28px 30px;
-      box-shadow: var(--shadow);
-      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
-    }
-  
-    .note-item:hover {
-      transform: translateY(-2px);
-      background: var(--hover);
-    }
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: clamp(2.1rem, 4vw, 2.9rem);
+            line-height: 1.12;
+            color: var(--accent-strong);
+            font-weight: 700;
+        }
 
-    .note-title {
-      display: inline-block;
-      font-size: 1.2rem;
-      font-weight: 700;
-      line-height: 1.45;
-      margin-bottom: 14px;
-    }
+        .hero p {
+            margin: 0;
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 1rem;
+        }
 
-  .note-title:hover {
-     text-decoration: underline;
-   }
- 
-   .note-date {
-     margin: 0 0 14px;
-     color: var(--muted);
-     font-size: 0.98rem;
-     font-weight: 500;
-   }
- 
-   .note-thought {
-     margin: 18px 0 0;
-     padding: 18px 20px;
-     background: var(--comment-bg);
-     border: 1px solid var(--line);
-     border-left: 4px solid var(--text);
-     border-radius: 14px;
-     color: var(--text);
-     font-size: 1.04rem;
-     line-height: 1.85;
-     font-weight: 500;
-   }
- 
-   .footer {
-     border-top: 1px solid var(--line);
-     padding: 28px 0 44px;
-     color: var(--muted);
-     font-size: 0.92rem;
-   }
- 
-   @media (max-width: 640px) {
-     .container {
-       padding-left: 20px;
-       padding-right: 20px;
-     }
- 
-     .topbar-inner {
-       flex-direction: column;
-       align-items: flex-start;
-       justify-content: center;
-       gap: 10px;
-       padding: 14px 0;
-     }
- 
-     .nav {
-       gap: 14px;
-       flex-wrap: wrap;
-     }
- 
-     .hero {
-       padding-top: 40px;
-     }
- 
-     .note-item {
-       padding: 20px;
-     }
- 
-     .note-title {
-       font-size: 1.08rem;
-     }
- 
-     .note-thought {
-       padding: 15px 16px;
-       font-size: 1rem;
-     }
-   }
- </style>
-  
+        .section {
+            padding: 12px 0 72px;
+        }
+
+        .section h2 {
+            margin: 0 0 22px;
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: var(--accent-strong);
+        }
+
+        .notes-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .note-item {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: 34px 38px;
+            box-shadow: var(--shadow);
+            transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+        }
+
+        .note-item:hover {
+            transform: translateY(-2px);
+            background: var(--hover);
+        }
+
+        .note-title {
+            display: inline-block;
+            font-size: 1.75rem;
+            font-weight: 760;
+            line-height: 1.35;
+            margin-bottom: 16px;
+            color: var(--accent-strong);
+        }
+
+        .note-title:hover {
+            text-decoration: underline;
+        }
+
+        .note-date {
+            margin: 0 0 22px;
+            color: var(--muted);
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .note-thought {
+            margin-top: 0;
+            padding: 26px 28px;
+            background: var(--card-soft);
+            border: 1px solid var(--line);
+            border-left: 5px solid var(--accent-strong);
+            border-radius: 16px;
+            color: var(--text);
+            font-size: 1.04rem;
+            line-height: 1.9;
+        }
+
+        .footer {
+            border-top: 1px solid var(--line);
+            padding: 28px 0 44px;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 760px) {
+            .container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .topbar-inner {
+                min-height: 66px;
+            }
+
+            .hero {
+                padding-top: 38px;
+            }
+
+            .note-item {
+                padding: 22px 20px;
+                border-radius: 18px;
+            }
+
+            .note-title {
+                font-size: 1.24rem;
+            }
+
+            .note-date {
+                margin-bottom: 16px;
+                font-size: 0.98rem;
+            }
+
+            .note-thought {
+                padding: 18px 16px;
+                font-size: 1rem;
+                line-height: 1.82;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="site-title">Shuo's Thinking Notes</div>
-    </div>
-  </header>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="site-title">Shuo's Thinking Notes</div>
+        </div>
+    </header>
 
+    <main class="container">
+        <section class="hero">
+            <h1>Notes</h1>
+            <p>Fragments of thought on optimization, learning theory, and mathematical questions that I want to remember.</p>
+        </section>
 
+        <section class="section">
+            <ul class="notes-list">
+                <li class="note-item">
+                    <a class="note-title" href="notes/stability_and_acceleration.pdf" target="_blank">
+                        Acceleration and Stability Regions of First-Order Methods on Strongly Convex Quadratics
+                    </a>
 
-     <section class="section">
-      <h2>Notes</h2>
-        <ul class="notes-list">
-          <li class="note-item">
-             <a class="note-title" href="notes/stability_and_acceleration.pdf" target="_blank">
-              Acceleration and Stability Regions of First-Order Methods on Strongly Convex Quadratics
-             </a>
-            <p class="note-date">2026.4</p>
-              <div class="note-thought">
-                I try to think about stability and acceleration. Some guys say that acceleration
-                comes from momentum, and momentum also causes instability. But I want to know
-                whether there is a deeper insight.
-                <br><br>
-                During this process, I found many new thoughts about different gradient methods.
-                For instance, Stephen Boyd used ODE to model NAG, which is very impressive.
-                <br><br>
-                It is a little pity that I did not finish this work. After doing one half of it,
-                I found it much more difficult than I thought. My current knowledge is not enough,
-                so I have to leave this work for now. Maybe one day I will come back.
-                <br><br>
-                I would express my sincere gratitude to Prof. Dr. Arnulf Jentzen and Prof. Yurii Nesterov.
-              </div>
-            </li>
-          </ul>
-      </section>
-   
- 
+                    <p class="note-date">2026.4</p>
 
-  </main>
+                    <div class="note-thought">
+                        I try to think about stability and acceleration. Some guys say that acceleration comes from momentum, and momentum also causes instability. But I want to know whether there is a deeper insight.
+                        <br><br>
+                        During this process, I found many new thoughts about different gradient methods. For instance, Stephen Boyd used ODE to model NAG, which is very impressive.
+                        <br><br>
+                        It is a little pity that I did not finish this work. After doing one half of it, I found it much more difficult than I thought. My current knowledge is not enough, so I have to leave this work for now. Maybe one day I will come back.
+                        <br><br>
+                        I would express my sincere gratitude to Prof. Dr. Arnulf Jentzen and Prof. Yurii Nesterov.
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
 
-  <footer class="footer">
-    <div class="container">
-      © 2026 Shuo Guo
-    </div>
-  </footer>
+    <footer class="footer">
+        <div class="container">© 2026 Shuo Guo</div>
+    </footer>
 </body>
 </html>
