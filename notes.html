@@ -1,12 +1,226 @@
-<h2>Notes</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shuo's Learning Material</title>
+  <style>
+    :root {
+      --bg: #f7f7f8;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --hover: #f0f1f3;
+      --max-width: 900px;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
 
-<ul class="notes-list">
-    <li class="note-item">
-        <a href="stability_and_acceleration.pdf" target="_blank">
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --card: #171a21;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --line: #2a2f3a;
+        --hover: #202531;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      background: var(--bg);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 64px;
+    }
+
+    .site-title {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .nav a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 56px 0 28px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .section {
+      padding: 20px 0 64px;
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-size: 1.4rem;
+      font-weight: 650;
+    }
+
+    .notes-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .note-item {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px 22px;
+      box-shadow: var(--shadow);
+      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    }
+
+    .note-item:hover {
+      transform: translateY(-2px);
+      background: var(--hover);
+    }
+
+    .note-title {
+      display: inline-block;
+      font-size: 1.08rem;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .note-title:hover {
+      text-decoration: underline;
+    }
+
+    .note-thought {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 0;
+      }
+
+      .nav {
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      .note-item {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="site-title">Shuo's Learning Material</div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Notes</a>
+        <a href="#">About</a>
+      </nav>
+    </div>
+  </header>
+
+
+
+    <section class="section">
+      <h2>Notes</h2>
+      <ul class="notes-list">
+        <li class="note-item">
+          <a class="note-title" href="stability_and_acceleration.pdf" target="_blank">
             Acceleration and Stability Regions of First-Order Methods on Strongly Convex Quadratics
-        </a>
-        <p>
-            My thoughts: This paper studies the tradeoff between acceleration and stability for first-order methods on strongly convex quadratic problems. What I find especially interesting is that acceleration is not simply “faster is better” — it often comes with a smaller stability region, which means the method becomes more fragile to step-size choices and perturbations.
-        </p>
-    </li>
-</ul>
+          </a>
+          <p class="note-thought">
+            2026.4
+          </p>            
+          <p class="note-thought">
+            I try to think about stability and acceleration. Some guys say that acceleration comes from momentum, and momentum also cause unstability. But I want to know if there is a deeper insight.
+          </p>
+          <p class="note-thought">
+            During thinking this process, I found many new thoughts about different gradient methods. For instance, Stephen Boyd used ODE to model NAG, which is very impressive.
+          </p>            
+          <p class="note-thought">
+            It's a little pity that I didn't finish this work. After doing one half of this work, I found it much more difficult than i thought. My current knowledge is not enough. So i have to leave this work. Maybe one day I'll come back?
+          </p>        
+          <p class="note-thought">
+            I would express my sincere gratitude to Prof. Dr. Arnulf Jentzen and Prof. Yurii Nesterov.
+          </p>               
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 Shuo Guo
+    </div>
+  </footer>
+</body>
+</html>
