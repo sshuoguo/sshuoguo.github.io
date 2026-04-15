@@ -7,44 +7,42 @@
 
     <style>
         :root {
-            --bg: #f7f4ee;
-            --panel: rgba(255, 251, 245, 0.9);
-            --main: #fffdf9;
-            --text: #241c2b;
-            --muted: #6f637b;
-            --line: rgba(111, 82, 143, 0.18);
+            --bg: #f2f2f0;
+            --panel: #e7e7e4;
+            --main: #fcfcfa;
+            --text: #222227;
+            --muted: #6a6a73;
+            --line: #d7d7de;
 
-            --purple: #6f5290;
-            --purple-deep: #4c3468;
-            --gold: #c79a2b;
-            --gold-soft: #e2c77b;
+            --accent: #655775;
+            --accent-strong: #4f435f;
+            --accent-soft: #f1eef6;
 
-            --link: #5d3f7d;
-            --link-hover: #b3841f;
+            --link: #5f526e;
+            --link-hover: #43384f;
 
-            --shadow: 0 18px 40px rgba(84, 55, 109, 0.10);
+            --shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
             --radius: 18px;
-            --max-width: 1400px;
+            --max-width: 1380px;
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --bg: #120f17;
-                --panel: rgba(29, 22, 37, 0.92);
-                --main: #191420;
-                --text: #f3edf8;
-                --muted: #b5a8c4;
-                --line: rgba(226, 199, 123, 0.18);
+                --bg: #121214;
+                --panel: #1a1a1f;
+                --main: #18181c;
+                --text: #ececf1;
+                --muted: #a8a8b2;
+                --line: #2d2d36;
 
-                --purple: #c8a8f0;
-                --purple-deep: #e8d8ff;
-                --gold: #e0b84f;
-                --gold-soft: #f3ddb0;
+                --accent: #bba9d2;
+                --accent-strong: #d9cdea;
+                --accent-soft: rgba(187, 169, 210, 0.10);
 
-                --link: #dbc1ff;
-                --link-hover: #ffd978;
+                --link: #cabce0;
+                --link-hover: #e7def3;
 
-                --shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+                --shadow: 0 18px 40px rgba(0, 0, 0, 0.34);
             }
         }
 
@@ -60,8 +58,8 @@
             margin: 0;
             font-family: Georgia, "Times New Roman", serif;
             background:
-                radial-gradient(circle at top left, rgba(199, 154, 43, 0.10), transparent 26%),
-                radial-gradient(circle at bottom right, rgba(111, 82, 143, 0.14), transparent 28%),
+                radial-gradient(circle at top left, rgba(101, 87, 117, 0.08), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.05), transparent 30%),
                 var(--bg);
             color: var(--text);
         }
@@ -69,7 +67,7 @@
         a {
             color: inherit;
             text-decoration: none;
-            transition: color 0.22s ease, transform 0.22s ease;
+            transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
         }
 
         .container {
@@ -81,37 +79,23 @@
         }
 
         .sidebar {
-            width: 250px;
+            width: 240px;
             min-height: calc(100vh - 56px);
-            padding: 28px 22px;
+            padding: 24px 20px;
             background: var(--panel);
             border: 1px solid var(--line);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-            backdrop-filter: blur(10px);
             position: sticky;
             top: 28px;
         }
 
         .sidebar h2 {
-            margin: 0 0 18px 0;
             font-size: 18px;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-            color: var(--purple-deep);
-            position: relative;
+            margin: 0 0 16px;
+            color: var(--accent-strong);
             padding-bottom: 10px;
-        }
-
-        .sidebar h2::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 54px;
-            height: 2px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, var(--gold), var(--purple));
+            border-bottom: 1px solid var(--line);
         }
 
         .sidebar a {
@@ -120,26 +104,25 @@
             padding: 10px 12px;
             border-radius: 10px;
             color: var(--link);
-            font-size: 15px;
         }
 
         .sidebar a:hover {
             color: var(--link-hover);
-            background: rgba(199, 154, 43, 0.08);
+            background: var(--accent-soft);
             transform: translateX(3px);
         }
 
         .main {
             flex: 1;
-            padding: 42px 48px;
+            padding: 42px 46px;
             background: var(--main);
             border: 1px solid var(--line);
-            border-radius: calc(var(--radius) + 2px);
+            border-radius: var(--radius);
             box-shadow: var(--shadow);
         }
 
         .header {
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
 
         .header h1 {
@@ -147,10 +130,7 @@
             font-size: 46px;
             line-height: 1.05;
             letter-spacing: 0.01em;
-            background: linear-gradient(90deg, var(--gold), var(--purple));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: var(--accent-strong);
         }
 
         .header p {
@@ -166,7 +146,7 @@
             align-items: flex-start;
             gap: 32px;
             margin-top: 10px;
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
 
         .profile-img {
@@ -177,14 +157,14 @@
             object-fit: cover;
             border-radius: 16px;
             border: 1px solid var(--line);
-            box-shadow: 0 14px 34px rgba(84, 55, 109, 0.14);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
         }
 
         .info {
             flex: 1;
             line-height: 1.8;
             font-size: 15.5px;
-            background: rgba(111, 82, 143, 0.04);
+            background: var(--accent-soft);
             border: 1px solid var(--line);
             border-radius: 16px;
             padding: 22px 24px;
@@ -199,7 +179,7 @@
         }
 
         .info strong {
-            color: var(--purple-deep);
+            color: var(--accent-strong);
         }
 
         .section-title {
@@ -208,30 +188,17 @@
             padding-bottom: 8px;
             font-size: 25px;
             font-weight: 700;
-            color: var(--purple-deep);
+            color: var(--accent-strong);
             border-bottom: 1px solid var(--line);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -1px;
-            width: 78px;
-            height: 2px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, var(--gold), var(--purple));
         }
 
         .section {
             font-size: 16px;
             line-height: 1.85;
-            color: var(--text);
         }
 
         .section p {
-            margin: 0 0 16px 0;
+            margin: 0 0 16px;
         }
 
         @media (max-width: 980px) {
@@ -268,9 +235,7 @@
 </head>
 
 <body>
-
 <div class="container">
-
     <div class="sidebar">
         <h2>General</h2>
         <a href="index.html">Home</a>
@@ -280,7 +245,6 @@
     </div>
 
     <div class="main">
-
         <div class="header">
             <h1>Shuo Guo</h1>
             <p>The Chinese University of Hong Kong, Shenzhen</p>
@@ -307,9 +271,7 @@
                 His interests lie in optimization theory, particularly the dynamics and stability of adaptive methods such as the Adam family and the role of second-order information, with a focus on applications in machine learning, deep learning, and artificial intelligence.
             </p>
         </div>
-
     </div>
 </div>
-
 </body>
 </html>
