@@ -1,0 +1,32 @@
+# jemdoc: menu{MENU}{cv.html}
+= Curriculum Vitae
+
+== Contact
+- *Shuo Guo*
+- School of Data Science, The Chinese University of Hong Kong, Shenzhen.
+- Email: [/mailto:shuoguo@link.cuhk.edu.cn shuoguo@link.cuhk.edu.cn].
+- Location: Shenzhen, China.
+- Full CV: [/CV.pdf CV.pdf].
+
+== Education
+- *The Chinese University of Hong Kong, Shenzhen*, Shenzhen, China.
+  B.Sc. in Statistics, School of Data Science, Sept. 2025 -- May 2029
+  (expected).
+
+== Experience
+- *Research Assistant*, May 2026 -- present. Working with a PhD student in the
+  research group of Prof. Dr. Ruoyu Sun, CUHK-Shenzhen. Mainly focusing on
+  optimization for deep learning.
+
+== Research Interests
+- Optimization theory.
+- Optimization for machine learning.
+- Machine learning theory.
+
+== Technical Skills
+- Python.
+- Basic programming for mathematical and statistical computing.
+
+== Academic Activities
+- Participated in seminars, group meetings, and independent study sessions
+  related to optimization, machine learning, and statistics.

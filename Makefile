@@ -1,6 +1,6 @@
-JEMDOC = python3 ../jemdoc
+JEMDOC ?= jemdoc
 CONF = mysite.conf
-PAGES = index research publications projects teaching cv
+PAGES = index research reading cv
 
 .PHONY: all clean
 

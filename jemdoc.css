@@ -188,6 +188,8 @@ div#footer a {
   height: 168px;
   border: 1px solid #c9d5e3;
   background: #f4f7fb;
+  object-fit: cover;
+  object-position: center;
 }
 
 .profile-text {

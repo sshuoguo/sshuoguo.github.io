@@ -1,0 +1,58 @@
+# jemdoc: menu{MENU}{index.html}
+= Shuo Guo
+School of Data Science, The Chinese University of Hong Kong, Shenzhen
+
+~~~
+{}{raw}
+<div class="profile">
+  <div class="profile-photo">
+    <img src="image.png" alt="Shuo Guo" />
+  </div>
+  <div class="profile-text">
+    <p class="lead">I am an undergraduate student in Statistics at the School of Data Science, The Chinese University of Hong Kong, Shenzhen.</p>
+    <p>My current interests are optimization theory, optimization for machine learning, and machine learning theory, with a particular focus on optimization for deep learning.</p>
+    <p class="contact-line">Email: <a href="mailto:shuoguo@link.cuhk.edu.cn">shuoguo@link.cuhk.edu.cn</a><br />
+    Location: Shenzhen, China<br />
+    CV: <a href="CV.pdf">CV.pdf</a> &middot; CUHK-Shenzhen page: <a href="https://myweb.cuhk.edu.cn/125090160">myweb.cuhk.edu.cn/125090160</a></p>
+  </div>
+</div>
+~~~
+
+== About
+I am pursuing a B.Sc. in Statistics at CUHK-Shenzhen. I am currently a research
+assistant working with a PhD student in the research group of Prof. Dr. Ruoyu
+Sun. My work mainly focuses on optimization for deep learning.
+
+I use this website to keep a concise academic profile, collect research notes,
+and organize reading related to optimization, statistics, and machine learning.
+
+== Research Interests
+- Optimization theory.
+- Optimization for machine learning.
+- Machine learning theory.
+- Deep learning optimization.
+
+== Education
+- *B.Sc. in Statistics*, School of Data Science, The Chinese University of Hong
+  Kong, Shenzhen, Sept. 2025 -- May 2029 (expected).
+
+== Experience
+- *Research Assistant*, CUHK-Shenzhen, May 2026 -- present. Working with a PhD
+  student in the research group of Prof. Dr. Ruoyu Sun, mainly focusing on
+  optimization for deep learning.
+
+== Selected Links
+- [/CV.pdf Curriculum vitae].
+- [/research.html Research interests and current work].
+- [/reading.html Independent study and reading].
+- [/https://myweb.cuhk.edu.cn/125090160 CUHK-Shenzhen personal website].
+
+== MathJax
+This site is built with jemdoc+MathJax. For example, gradient descent studies
+updates of the form
+
+\(
+\theta_{t+1} = \theta_t - \eta \nabla f(\theta_t),
+\)
+
+and asks how assumptions on $f$ determine convergence behavior.
