@@ -1,0 +1,53 @@
+# jemdoc: menu{MENU}{index.html}
+= Siegfried Guo
+Researcher / Engineer
+
+~~~
+{}{raw}
+<div class="profile">
+  <div class="profile-photo">
+    <img src="profile.svg" alt="Profile portrait placeholder" />
+  </div>
+  <div class="profile-text">
+    <p class="lead">I work on problems at the intersection of applied mathematics, machine learning, and reliable software systems.</p>
+    <p>This site is built with <a href="https://github.com/wsshin/jemdoc_mathjax">jemdoc+MathJax</a>, so it stays lightweight, versionable, and comfortable for technical writing.</p>
+    <p class="contact-line">Email: <a href="mailto:siegfriedguo@example.com">siegfriedguo@example.com</a> · GitHub: <a href="https://github.com/siegfriedguo">siegfriedguo</a> · Location: Shanghai / Remote</p>
+  </div>
+</div>
+~~~
+
+== About
+I am interested in building tools and models that make complex systems easier
+to understand. My current focus areas include:
+
+- trustworthy machine learning and evaluation;
+- numerical methods and optimization;
+- developer tools for research workflows;
+- clear technical communication and reproducible experiments.
+
+== News
+- *May 2026:* Personal website scaffolded with jemdoc+MathJax.
+- *Spring 2026:* Add your latest paper, project, internship, award, or talk here.
+- *Winter 2026:* Add a concise milestone with a link when available.
+
+== Selected Work
+- [/projects.html Research Workflow Toolkit] -- a compact toolkit for reproducible
+  experiments, notes, and static reports.
+- [/publications.html Example Paper Title] -- a placeholder publication entry
+  showing the recommended citation style.
+- [/research.html MathJax Notes] -- MathJax is enabled, so equations render
+  directly from LaTeX, for example $f_\theta(x) = \arg\max_y p_\theta(y \mid x)$.
+
+== MathJax Check
+This page supports numbered equations through MathJax:
+
+\(
+\begin{equation}
+\min_\theta \; \mathbb{E}_{(x,y)\sim \mathcal{D}}
+\left[\ell(f_\theta(x), y)\right] + \lambda \|\theta\|_2^2.
+\label{eq:objective}
+\end{equation}
+\)
+
+Equation $\eqref{eq:objective}$ is a placeholder objective you can replace with
+your own research notation.

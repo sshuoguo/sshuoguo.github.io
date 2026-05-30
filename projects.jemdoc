@@ -1,0 +1,23 @@
+# jemdoc: menu{MENU}{projects.html}
+= Projects
+
+== Research Workflow Toolkit
+A lightweight collection of scripts and templates for turning experiments,
+notes, and figures into a static research website.
+
+- Stack: Python, Make, jemdoc, MathJax.
+- Status: template scaffold ready.
+- Link: [/https://github.com/siegfriedguo/research-workflow GitHub repository].
+
+== Model Evaluation Dashboard
+A placeholder project for comparing model outputs, collecting error categories,
+and summarizing qualitative findings.
+
+- Stack: Python, TypeScript, SQLite.
+- Focus: evaluation design, reproducible analysis, report generation.
+
+== Numerical Notes
+A small library of worked examples in optimization and numerical linear algebra.
+
+- Includes LaTeX equations rendered by MathJax.
+- Designed for teaching notes and self-contained tutorials.

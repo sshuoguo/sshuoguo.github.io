@@ -1,0 +1,40 @@
+# jemdoc: menu{MENU}{research.html}
+= Research
+
+== Overview
+My research interests are organized around one question: how can we design
+computational systems that are accurate, inspectable, and useful under real
+constraints?
+
+== Themes
+=== Reliable Learning Systems
+- evaluation methods for model behavior under distribution shift;
+- uncertainty estimates and calibration;
+- debugging workflows for learned systems.
+
+=== Optimization and Numerical Methods
+- first-order methods for large-scale optimization;
+- practical tradeoffs between accuracy, stability, and runtime;
+- mathematical tooling for reproducible research notes.
+
+=== Research Infrastructure
+- static research websites, literate notes, and lightweight publishing;
+- experiment tracking that remains useful after a project ends;
+- small tools that reduce friction in reading, writing, and reviewing.
+
+== Working Notes
+Here is a sample theorem-style note you can replace with your own material.
+
+~~~
+{Observation}{}
+When the loss $\ell$ is convex and $L$-smooth, gradient descent with a
+sufficiently small step size gives a monotone decrease in objective value.
+~~~
+
+\(
+\begin{aligned}
+F(\theta_{t+1})
+&\leq F(\theta_t) - \eta \left(1 - \frac{L\eta}{2}\right)
+\|\nabla F(\theta_t)\|_2^2.
+\end{aligned}
+\)

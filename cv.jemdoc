@@ -1,0 +1,25 @@
+# jemdoc: menu{MENU}{cv.html}
+= Curriculum Vitae
+
+== Contact
+- Name: Siegfried Guo
+- Email: [/mailto:siegfriedguo@example.com siegfriedguo@example.com]
+- GitHub: [/https://github.com/siegfriedguo github.com/siegfriedguo]
+- Website: this site
+
+== Education
+- *Degree Program*, University Name, 2022--2026.
+- *Previous Degree*, University Name, 2018--2022.
+
+== Experience
+- *Research / Engineering Role*, Organization, 2026--present.
+- *Internship or Assistantship*, Organization, 2025.
+
+== Skills
+- Programming: Python, JavaScript/TypeScript, C/C++, SQL.
+- Research: machine learning, optimization, statistics, reproducible workflows.
+- Tools: Git, Linux, LaTeX, static site generation.
+
+== Service
+- Reviewer or organizer entries can go here.
+- Reading groups, open-source contributions, and mentoring can go here.
