@@ -1,126 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The First Second of Eternity</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>永恒的第一秒</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #000000;
-      --bg-soft: #0a0a0a;
-      --text: #f3eee4;
-      --glow: rgba(255, 248, 235, 0.08);
-    }
+    <style>
+        :root {
+            --bg: #000000;
+            --bg-soft: #0a0a0a;
+            --text: #f3eee4;
+            --glow: rgba(255, 248, 235, 0.08);
+        }
 
-    * {
-      box-sizing: border-box;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    html, body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      background:
-        radial-gradient(circle at center, #111 0%, #050505 44%, #000 100%);
-      color: var(--text);
-      overflow: hidden;
-    }
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at center, #111 0%, #050505 44%, #000 100%);
+            color: var(--text);
+            overflow: hidden;
+        }
 
-    body {
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: clamp(28px, 5vw, 90px);
-    }
+        body {
+            min-height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(28px, 5vw, 90px);
+        }
 
-    main {
-      width: min(1200px, 90vw);
-      max-width: 1200px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-    }
+        main {
+            width: min(1200px, 90vw);
+            max-width: 1200px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
 
-    .quote {
-      margin: 0;
-      max-width: 1040px;
-      font-family:
-        "IM Fell English",
-        "Cormorant Garamond",
-        "Palatino Linotype",
-        "Book Antiqua",
-        Georgia,
-        serif;
-      font-size: clamp(1.7rem, 2.55vw, 3.35rem);
-      line-height: 1.42;
-      letter-spacing: 0.015em;
-      text-wrap: balance;
-      text-shadow: 0 0 20px var(--glow);
-    }
+        .quote {
+            margin: 0;
+            max-width: 1040px;
+            font-family:
+                "IM Fell English",
+                "Cormorant Garamond",
+                "Palatino Linotype",
+                "Book Antiqua",
+                Georgia,
+                serif;
+            font-size: clamp(1.7rem, 2.55vw, 3.35rem);
+            line-height: 1.42;
+            letter-spacing: 0.015em;
+            text-wrap: balance;
+            text-shadow: 0 0 20px var(--glow);
+        }
 
-    .quote::first-letter {
-      font-size: 1.18em;
-    }
+        .quote::first-letter {
+            font-size: 1.18em;
+        }
 
-    @media (max-width: 900px) {
-      .quote {
-        font-size: clamp(1.35rem, 4.7vw, 2.3rem);
-        line-height: 1.44;
-      }
-    }
+        /* 叙述性句子稍微柔和一点，保持视觉节奏 */
+        .quote.narrative {
+            opacity: 0.85;
+            font-style: italic;
+            margin-top: 0.25em;
+        }
 
-    @media (max-width: 560px) {
-      body {
-        padding: 18px;
-      }
+        @media (max-width: 900px) {
+            .quote {
+                font-size: clamp(1.35rem, 4.7vw, 2.3rem);
+                line-height: 1.44;
+            }
+        }
 
-      .quote {
-        font-size: clamp(1.12rem, 5.4vw, 1.7rem);
-        line-height: 1.46;
-      }
-    }
-  </style>
+        @media (max-width: 560px) {
+            body {
+                padding: 18px;
+            }
+
+            .quote {
+                font-size: clamp(1.12rem, 5.4vw, 1.7rem);
+                line-height: 1.46;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main aria-label="The first second of eternity quotation">
-    <p class="quote">
-      How many seconds in eternity?
-    </p>
-    <p class="quote">
-      And the shepherd's boy says:
-    </p>
-    <p class="quote">
-      "There's this mountain of pure diamond."
-    </p>
-    <p class="quote">
-      "It takes an hour to climb it, and an hour to go around it!"
-    </p>
-    <p class="quote">
-      "Every hundred years, a little bird comes"
-    </p>
-    <p class="quote">
-      "and sharpens its beak on the diamond mountain."	
-    </p>
-    <p class="quote">
-      "And when the entire mountain is chiselled away,"
-    </p>
-    <p class="quote">
-      "the first second of eternity will have passed!"
-    </p>
-    <p class="quote">
-      You must think that's a hell of a long time.
-    </p>
-    <p class="quote">
-      Personally,I think that's a hell of a bird.
-    </p>
-  </main>
+    <main aria-label=" ">
+        <!-- 所有对话双引号已替换为单引号，叙述句保留原样 -->
+        <p class="quote">'How many seconds in eternity?'</p>
+        <p class="quote narrative">And the shepherd's boy says:</p>
+        <p class="quote">'There's this mountain of pure diamond.'</p>
+        <p class="quote">'It takes an hour to climb it, and an hour to go around it!'</p>
+        <p class="quote">'Every hundred years, a little bird comes'</p>
+        <p class="quote">'and sharpens its beak on the diamond mountain.'</p>
+        <p class="quote">'And when the entire mountain is chiselled away,'</p>
+        <p class="quote">'the first second of eternity will have passed!'</p>
+        <p class="quote narrative">You must think that's a hell of a long time.</p>
+        <p class="quote narrative">Personally, I think that's a hell of a bird.</p>
+    </main>
 </body>
 </html>
