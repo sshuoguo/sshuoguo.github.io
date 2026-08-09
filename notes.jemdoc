@@ -1,0 +1,11 @@
+# jemdoc: menu{MENU}{notes.html}
+= Notes
+
+This page collects my study notes. Each link opens the corresponding PDF.
+
+== Ordinary Differential Equations
+- [/ODE_notes.pdf Ordinary Differential Equation Notes].
+
+== Optimization
+- [/Adam.pdf Introduction to the Adam Optimizer].
+- [/Muon_analysos.pdf Hand-written notes for Muon]
