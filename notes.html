@@ -1,58 +1,52 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-<meta name="generator" content="jemdoc+MathJax" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>Notes</title>
-<!-- MathJax 2 is the version supported by jemdoc_mathjax. -->
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] },
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
-<script type="text/javascript" async="async"
-  src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal website of Shuo Guo.">
+  <title>Notes | Shuo Guo</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>
+    window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}, svg: {fontCache: 'global'}};
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<td id="layout-menu">
-<div class="menu-category">Shuo Guo</div>
-<div class="menu-item"><a href="index.html">Home</a></div>
-<div class="menu-item"><a href="notes.html" class="current">Notes</a></div>
-</td>
-<td id="layout-content">
-<div id="toptitle">
-<h1>Notes</h1>
-</div>
-<p>This page collects my study notes. Each link opens the corresponding PDF.
-</p>
-<h2>Ordinary Differential Equations</h2>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="masthead__inner">
+      <a class="site-title" href="index.html">Shuo Guo</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="notes.html" aria-current="page">Notes</a></nav>
+    </div>
+  </header>
+  <div class="page-shell">
+    <aside class="profile" aria-label="Contact information">
+      <img src="image.png" alt="Portrait of Shuo Guo" class="profile__photo">
+      <h2>Shuo Guo</h2>
+      <p class="profile__bio">Undergraduate student at CUHK-Shenzhen.</p>
+      <p class="profile__bio">Email: shuoguo@link.cuhk.edu.cn</p>
+    </aside>
+    <main id="main" class="page-content">
+      <header class="page-header">
+        <h1>Notes</h1>
+      </header>
+      <h2>Ordinary Differential Equations</h2>
 <ul>
-<li><p><a href="ODE_notes.pdf">Ordinary Differential Equation Notes</a>.
-</p>
-</li>
+<li><a href="ODE_notes.pdf">Ordinary Differential Equation Notes</a></li>
 </ul>
 <h2>Optimization</h2>
+<h3>Adam optimizer</h3>
 <ul>
-<li><p><a href="Adam.pdf">Introduction to the Adam Optimizer</a>.
-</p>
-</li>
-<li><p><a href="Muon_analysos.pdf">Hand-written notes for Muon</a></p>
-</li>
+<li><a href="Adam.pdf">Introduction to the Adam Optimizer</a></li>
 </ul>
-<div id="footer">
-<div id="footer-text">
-Last updated 2026-08-09 11:40:27 CST. Generated with <a href="https://github.com/wsshin/jemdoc_mathjax">jemdoc+MathJax</a>.
-</div>
-</div>
-</td>
-</tr>
-</table>
+<h3>Muon optimizer</h3>
+<ul>
+<li><a href="Notes_for_Muon.pdf">Introduction to the Muon Optimizer</a></li>
+</ul>
+    </main>
+  </div>
+  <footer class="site-footer"><div>© 2026 Shuo Guo · Built with the Minimal Mistakes sunrise-inspired static layout.</div></footer>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>

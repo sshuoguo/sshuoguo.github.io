@@ -1,0 +1,9 @@
+const toggle = document.querySelector('.nav-toggle');
+const navigation = document.querySelector('.site-nav');
+
+if (toggle && navigation) {
+  toggle.addEventListener('click', () => {
+    const isOpen = navigation.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+}
