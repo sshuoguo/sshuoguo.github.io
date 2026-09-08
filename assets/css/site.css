@@ -210,6 +210,61 @@ li {
   margin: 0.35rem 0;
 }
 
+.resume-item {
+  padding: 1rem 0 1.1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.resume-item__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.resume-item__identity {
+  min-width: 0;
+}
+
+.resume-item__identity h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.resume-item__organization,
+.resume-item__dates,
+.resume-item__advisor,
+.resume-item__description {
+  margin-bottom: 0;
+}
+
+.resume-item__organization {
+  margin-top: 0.1rem;
+  color: var(--muted);
+}
+
+.resume-item__dates {
+  flex: 0 0 auto;
+  color: var(--accent-dark);
+  font-size: 0.96rem;
+  font-style: italic;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.resume-item__advisor,
+.resume-item__description {
+  margin-top: 0.62rem;
+}
+
+.resume-item__advisor span {
+  margin-right: 0.35em;
+  color: var(--muted);
+  font-size: 0.9em;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.04em;
+}
+
 code {
   background: #f6e8d1;
   padding: 0.08em 0.27em;
@@ -324,6 +379,15 @@ code {
 
   h2 {
     font-size: 1.5rem;
+  }
+
+  .resume-item__header {
+    display: block;
+  }
+
+  .resume-item__dates {
+    margin-top: 0.25rem;
+    text-align: left;
   }
 
   .pdf-preview {
