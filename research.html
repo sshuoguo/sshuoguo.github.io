@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal website of Shuo Guo.">
+  <title>Research | Shuo Guo</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>
+    window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}, svg: {fontCache: 'global'}};
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="masthead__inner">
+      <a class="site-title" href="index.html">Shuo Guo</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="research.html" aria-current="page">Research</a><a href="blog.html">Blog</a></nav>
+    </div>
+  </header>
+  <div class="page-shell">
+    <aside class="profile" aria-label="Contact information">
+      <img src="image.png" alt="Portrait of Shuo Guo" class="profile__photo">
+      <h2>Shuo Guo</h2>
+      <p class="profile__bio">Undergraduate student at CUHK-Shenzhen.</p>
+      <p class="profile__bio">Email: shuoguo@link.cuhk.edu.cn</p>
+    </aside>
+    <main id="main" class="page-content">
+      <header class="page-header">
+        <h1>Research</h1>
+      </header>
+      <h2>Conserved quantities</h2>
+<p>Define the loss of our optimization model: $$\mathcal L: \text{Parameter}\times\text{Data}\to \mathbb R$$ And denote the parameter as $\theta$.</p>
+<p>We are trying to find an operator $G:\text{Parameter}\to\text{Parameter}$, and it remains: $$\mathcal L(\theta)=\mathcal L(G(\theta))$$</p>
+<p>Denote a differentiable action $\phi:\theta\to\phi(\theta,g)$, where $g\in G$. So it holds: $$&lt;\nabla f,\partial_{\alpha}\phi|_{\alpha = I}&gt;=0$$</p>
+<h2>Some work done during Independent Study course</h2>
+<h3>Singular Values and Integer Powersof Accretive Matrices</h3>
+<p>Consider any accretive matrix $A \in \mathbb R^{n \times n}$, which means for any $x \in \mathbb R^n$ we have $x^T A x&gt;0$. Do we have a universal bound constant $c$ s.t. $$\sigma (A)^2 \le 2 \sigma (A^2)?$$ What about for cubic? Fourth power...? This notes deals with the question.</p>
+<ul>
+<li><a href="report.pdf">Singular Values and Integer Powersof Accretive Matrices</a></li>
+</ul>
+<p>I've proved that there exists a universal constant $c =2$ s.t. $$\sigma (A)^2 \le 2 \sigma (A^2)\quad\text{for all }n\in \mathbb N$$ Also, for every $k \in \mathbb N$, there exists a bound: $$\sigma(A)^k\leq 2^{k(k-1)/2}\sigma(A^k)$$</p>
+    </main>
+  </div>
+  <footer class="site-footer"><div>© 2026 Shuo Guo · Built with the Minimal Mistakes sunrise-inspired static layout.</div></footer>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
