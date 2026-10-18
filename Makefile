@@ -1,11 +1,9 @@
-JEMDOC ?= jemdoc
-CONF = mysite.conf
-PAGES = index research reading cv
+PYTHON ?= python3
 
-.PHONY: all clean
+.PHONY: render serve
 
-all:
-	$(JEMDOC) -c $(CONF) $(addsuffix .jemdoc,$(PAGES))
+render:
+	$(PYTHON) scripts/render_site.py
 
-clean:
-	rm -f $(addsuffix .html,$(PAGES))
+serve: render
+	$(PYTHON) -m http.server 8000 --bind 127.0.0.1

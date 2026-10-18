@@ -1,75 +1,96 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>Shuo Guo</title>
-<!-- MathJax -->
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="async">
-</script>
-<!-- End MathJax -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal website of Shuo Guo.">
+  <title>Home | Shuo Guo</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>
+    window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}, svg: {fontCache: 'global'}};
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<td id="layout-menu">
-<div class="menu-category">Shuo Guo</div>
-<div class="menu-item"><a href="index.html" class="current">Home</a></div>
-<div class="menu-item"><a href="notes.html">Notes</a></div>
-</td>
-<td id="layout-content">
-<div id="toptitle">
-<h1><a href="bird.html" class="current">Shuo Guo</a></h1>
-<div id="subtitle">School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen
-</div>
-</div>
-<div class="profile">
-  <div class="profile-photo">
-    <img src="image.png" alt="Shuo Guo" />
-  </div>
-  <div class="profile-text">
-    <p><b>Welcome to my personal website!</b></p>
-    <p class="contact-line">Email: <a href="mailto:shuoguo@link.cuhk.edu.cn">shuoguo@link.cuhk.edu.cn</a><br />
-    Affiliation: The Chinese University of Hong Kong, Shenzhen<br />
-    Location: Shenzhen, China<br />
-  </div>
-</div>
-<h2>About</h2>
-<p>I'm an undergraduate student in Mathematics and Applied Mathematics at the School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen. My interests lie in optimization for Machine learning, Deep learning and Machine learning from a mathematical perspective.
-</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="masthead__inner">
+      <a class="site-title" href="index.html">Shuo Guo</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a><a href="research.html">Research</a><a href="blog.html">Blog</a></nav>
+    </div>
+  </header>
+  <div class="page-shell">
+    <aside class="profile" aria-label="Contact information">
+      <img src="image.png" alt="Portrait of Shuo Guo" class="profile__photo">
+      <h2>Shuo Guo</h2>
+      <p class="profile__bio">Undergraduate student at CUHK-Shenzhen.</p>
+      <p class="profile__bio">E-Mail: shuoguo@link.cuhk.edu.cn</p>
+    </aside>
+    <main id="main" class="page-content">
+      <header class="page-header">
+        <h1>Home</h1>
+      </header>
+      <h2>About</h2>
+<p>I am an undergraduate student in Applied Mathematics at the School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen. My research interests lie in theoretical optimization and the mathematical foundations of machine learning. I am interested in the dynamics, stability, and convergence of stochastic and adaptive optimization algorithms, viewed through tools from dynamical systems and stochastic analysis.</p>
 <h2>Education</h2>
+<article class="resume-item">
+  <div class="resume-item__header">
+    <div class="resume-item__identity">
+      <h3><strong>B.Sc. in Applied Mathematics</strong></h3>
+      <p class="resume-item__organization">The Chinese University of Hong Kong, Shenzhen</p>
+    </div>
+    <p class="resume-item__dates">Sept. 2025 — May 2029 (expected)</p>
+  </div>
+  <p class="resume-item__advisor"><span>Advisor</span><a href="https://tomluo123.github.io/">Prof. Dr. Zhi-Quan Tom Luo</a></p>
+</article>
+<h2>Research Interests</h2>
 <ul>
-<li><p><b>B.Sc. in Applied Mathematics</b> The Chinese University of Hong
-Kong, Shenzhen, Sept. 2025 &ndash; May 2029 (expected).
-</p>
-</li>
+<li>Conserved quantities in optimization.</li>
+<li>Geometry of flat minima in deep learning optimization.</li>
+<li>Theoretical optimization and first-order methods.</li>
+<li>Dynamics, stability, and convergence of stochastic and adaptive optimization algorithms.</li>
+<li>Mathematical foundations of deep learning.</li>
 </ul>
 <h2>Experience</h2>
-<ul>
-<li><p><b>Research Assistant</b>, CUHK-Shenzhen, May 2026 &ndash; Jul 2026
-</p>
-</li>
-</ul>
+<article class="resume-item">
+  <div class="resume-item__header">
+    <div class="resume-item__identity">
+      <h3><strong>Undergrad Researcher</strong></h3>
+      <p class="resume-item__organization">School of Data Science, CUHK-Shenzhen</p>
+    </div>
+    <p class="resume-item__dates">Sept. 2026 — Present</p>
+  </div>
+</article>
+<article class="resume-item">
+  <div class="resume-item__header">
+    <div class="resume-item__identity">
+      <h3><strong>Research Assistant</strong></h3>
+      <p class="resume-item__organization">School of Artificial Intelligence, CUHK-Shenzhen</p>
+    </div>
+    <p class="resume-item__dates">Sept. 2026 — Present</p>
+  </div>
+  <p class="resume-item__advisor"><span>Advisor</span><a href="https://williampixell.github.io/">Prof. Dr. Xiaopeng Li</a></p>
+  <p class="resume-item__description">Focusing on flat minimum and conserved quantities of deep learning optimization.</p>
+</article>
+<article class="resume-item">
+  <div class="resume-item__header">
+    <div class="resume-item__identity">
+      <h3><strong>Research Assistant</strong></h3>
+      <p class="resume-item__organization">School of Data Science, CUHK-Shenzhen</p>
+    </div>
+    <p class="resume-item__dates">May 2026 — July 2026</p>
+  </div>
+  <p class="resume-item__description">Worked on the empirical evaluation of optimization methods for neural-network training.</p>
+</article>
 <h2>Selected Links</h2>
 <ul>
-<li><p>Click <a href="CV.pdf">here</a> to view my CV.
-</p>
-</li>
+<li><a href="CV.pdf">Curriculum Vitae</a></li>
+<li><a href="https://orcid.org/0009-0004-3839-6490">ORCID</a></li>
 </ul>
-<div id="footer">
-<div id="footer-text">
-Last updated 2026-07-06. 
-</div>
-</div>
-</td>
-</tr>
-</table>
+    </main>
+  </div>
+  <footer class="site-footer"><div>© 2026 Shuo Guo · Built with the Minimal Mistakes sunrise-inspired static layout.</div></footer>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
