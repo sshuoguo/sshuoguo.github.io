@@ -1,3 +1,3 @@
-Hi all
+Hi👋
 
-This is my personal web
+This is my personal website
