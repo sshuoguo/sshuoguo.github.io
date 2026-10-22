@@ -1,9 +1,31 @@
+# Markdown and jemdoc files are local editing sources.  The generated HTML is
+# what GitHub Pages serves, so commit the HTML after rendering instead.
+*.md
+*.jemdoc
+
+# Local Python and macOS files.
 __pycache__/
 *.py[cod]
+.DS_Store
+website-update.log
+
+# An unused legacy image folder kept only on this computer.
+Pic/
+
+# LaTeX source and build artefacts stay local.  PDFs remain publishable.
+*.tex
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.xdv
+
+# Legacy Jekyll build artefacts.
 .jekyll-cache/
 .sass-cache/
 .jekyll-metadata
 _site/
 .bundle/
 vendor/
-website-update.log
