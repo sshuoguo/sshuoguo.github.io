@@ -24,6 +24,7 @@ title: **Undergrad Researcher**
 organization: School of Data Science, CUHK-Shenzhen
 dates: Sept. 2026 — Present
 description: Focusing on mathematical foundation of deep learning.
+advisor: 
 :::
 
 ::: resume
